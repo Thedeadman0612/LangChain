@@ -19,7 +19,15 @@ agent = create_agent(llm, tools)
 
 def main():
     print("Hello from langchain!")
-    result = agent.invoke({"messages": [HumanMessage(content="provide 3 job openings for AI engineer using langchain in India with highest salary package")]})
+    result = agent.invoke(
+        {
+            "messages": [
+                HumanMessage(
+                    content="provide 3 job openings for AI engineer using langchain in India with highest salary package"
+                )
+            ]
+        }
+    )
     print(result)
 
 
